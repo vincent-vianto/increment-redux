@@ -1,18 +1,22 @@
  const initialState = {
      count:0
 }
-const Increment = 'Increment';
-const Decrement = 'Decrement';
+const INCREMENT = 'INCREMENT';
+const DECREMENT = 'DECREMENT';
 
-export { Increment,Decrement }
+export { INCREMENT,DECREMENT }
 
 export default (state = initialState, action = {}) => {
     console.log('reducer');
     switch(action.type){
-        case Increment:
-            return Object.assign( {}, state, { count: state.count+ 1} )
-        case Decrement:
-            return Object.assign( {}, state, { count: state.count - 1} )
+        case INCREMENT:
+            return {
+                count: state.count + 1
+              };
+        case DECREMENT:
+            return {
+                count: state.count - 1
+              };
         default: 
            console.log('default');
             return state;

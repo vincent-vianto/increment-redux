@@ -8,7 +8,7 @@ const store = createStore(Reducer)
 
 function App() {
   return (
-    <Provider>
+    <Provider store={store}>
       <Increment/>
     </Provider>
   );

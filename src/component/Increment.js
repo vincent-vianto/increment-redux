@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux"
+import { INCREMENT, DECREMENT } from './Reducer';
 
 class Increment extends Component {
     state= {
@@ -7,11 +8,11 @@ class Increment extends Component {
     }
 
     increment = () => {
-        this.props.dispatch({ type: 'Increment' });
+        this.props.dispatch({ type: INCREMENT });
       }
     
       decrement = () => {
-        this.props.dispatch({ type: 'Decrement' });
+        this.props.dispatch({ type: DECREMENT });
       }
     
     render() {
